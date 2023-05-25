@@ -44,11 +44,12 @@ function showSlides(n) {
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    slides[i].style.backgroundColor=slides[i].querySelector('input').value
     buttons[i].style.backgroundColor = "#000";
   }
   slides[slideIndex-1].style.display = "flex";
   buttons[slideIndex-1].style.backgroundColor = "#00f";
 
-  slides[slideIndex-1].style.width = "1400px";
+  slides[slideIndex-1].style.width = "1282px";
 
 }
