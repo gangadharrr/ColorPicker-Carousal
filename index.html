@@ -7,9 +7,12 @@
         <link rel="stylesheet" type="text/css" href="assets\css\style.css" />
     </head>
     <body>
+        <div class="number-display"><p>1/5</p></div>
+        
         <div class="container">
             <div class="slider">
                 <div class="display-card" id="first-page">
+                    <button class="nav-button" id="prev"onclick="plusSlides(-1)">&#10094;</button>
                     <label for="favcolor">Select your favorite color:</label>
                     <input type="color" id="favcolor" name="favcolor" value="#ff0000">
                     <button class="nav-button" id="next" onclick="plusSlides(1)">&#10095;</button>
@@ -36,8 +39,17 @@
                     <button class="nav-button" id="prev"onclick="plusSlides(-1)">&#10094;</button>
                     <label for="favcolor">Select your favorite color:</label>
                     <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                    <button class="nav-button" id="next" onclick="plusSlides(1)">&#10095;</button>
                 </div>
             </div>
+        </div>
+        <div class="dot">
+            <button class="dot-button" onclick="currentSlide(1)">1</button>
+            <button class="dot-button" onclick="currentSlide(2)">2</button>
+            <button class="dot-button" onclick="currentSlide(3)">3</button>
+            <button class="dot-button" onclick="currentSlide(4)">4</button>
+            <button class="dot-button" onclick="currentSlide(5)">5</button>
+        </div>
         <script src="assets/js/script.js"></script>
     </body>
 </html>

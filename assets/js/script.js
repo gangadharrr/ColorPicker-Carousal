@@ -27,7 +27,7 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(slideIndex = n>0?(slideIndex+n)%values.length:slideIndex+n<0?values.length-1:slideIndex+n);
 }
 
 // Thumbnail image controls
@@ -37,20 +37,17 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
+  document.querySelector(".number-display p").innerHTML=`${n==0?5:n}/5`;
   let slides = document.getElementsByClassName("display-card");
-
+  let buttons= document.querySelectorAll(".dot button");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    buttons[i].style.backgroundColor = "#000";
   }
   slides[slideIndex-1].style.display = "flex";
-  slides[slideIndex-1].style.se
-  = `flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  align-self: center;`;
+  buttons[slideIndex-1].style.backgroundColor = "#00f";
 
   slides[slideIndex-1].style.width = "1400px";
 
