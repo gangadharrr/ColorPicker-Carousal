@@ -48,7 +48,7 @@ function showSlides(n) {
     buttons[i].style.backgroundColor = "#000";
   }
   slides[slideIndex-1].style.display = "flex";
-  buttons[slideIndex-1].style.backgroundColor = "#00f";
+  buttons[slideIndex-1].style.backgroundColor = "rgb(255, 115, 115)";
 
   slides[slideIndex-1].style.width = "1282px";
 
